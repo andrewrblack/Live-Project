@@ -22,81 +22,81 @@ The last two weeks of my time at the Tech Academy, I worked with other students 
 
 ### Back to the top button
 
-mybutton = document.getElementById("myBtn");
+		mybutton = document.getElementById("myBtn");
 
 
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
+		function topFunction() {
+		  document.body.scrollTop = 0; 
+		  document.documentElement.scrollTop = 0; 
+		}
 
-window.onscroll = function() {scrollFunction()};
+		window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  
-  
-  if (document.body.scrollTop > screen.height || document.documentElement.scrollTop > screen.height) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+		function scrollFunction() {
+
+
+		  if (document.body.scrollTop > screen.height || document.documentElement.scrollTop > screen.height) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
 
  
  ### Dark Mode Function
 
-const btn = document.querySelector('.btn-toggle');
+		const btn = document.querySelector('.btn-toggle');
 
-btn.addEventListener('click', function() {
-  
-  document.body.classList.toggle('dark-theme');  
-})
+		btn.addEventListener('click', function() {
+
+		  document.body.classList.toggle('dark-theme');  
+		})
 
 
 ### Axios API Function
-function getSongs() {
-  
-  var obj = document.getElementById("mySelect").value;
+		function getSongs() {
 
-  var options = {
-  method: 'GET',
-  url: 'https://shazam.p.rapidapi.com/search',
-  params: {term: obj},
-  headers: {
-    'x-rapidapi-key': 'ApiKey',
-    'x-rapidapi-host': 'shazam.p.rapidapi.com'
-  }
-};
+		  var obj = document.getElementById("mySelect").value;
 
-var all_titles = []
+		  var options = {
+		  method: 'GET',
+		  url: 'https://shazam.p.rapidapi.com/search',
+		  params: {term: obj},
+		  headers: {
+		    'x-rapidapi-key': 'ApiKey',
+		    'x-rapidapi-host': 'shazam.p.rapidapi.com'
+		  }
+		};
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
+		var all_titles = []
 
-  //breaking down the api response to just songs
-  var all_data = response.data;
-  var all_tracks = all_data.tracks.hits;
+		axios.request(options).then(function (response) {
+			console.log(response.data);
 
-  function get_track_names(tracks) {
-    var track_names = [];
-    for (var i = 0; i < tracks.length; i++) {
-      track_names.push(tracks[i].track.title);
-    }
-    return track_names;
-  };
-  
-  all_titles = get_track_names(all_tracks);
-  console.log(all_titles);
+		  //breaking down the api response to just songs
+		  var all_data = response.data;
+		  var all_tracks = all_data.tracks.hits;
 
-  //printing data as a list
-  document.getElementById("display").innerHTML = "<li>"+all_titles[0]+"</li>"+ "<li>"+all_titles[1]+"</li>"+ "<li>"+all_titles[2]+"</li>"+ "<li>"+all_titles[3]+"</li>" ;
-  
+		  function get_track_names(tracks) {
+		    var track_names = [];
+		    for (var i = 0; i < tracks.length; i++) {
+		      track_names.push(tracks[i].track.title);
+		    }
+		    return track_names;
+		  };
 
-}).catch(function (error) {
-	console.error(error);
-});
+		  all_titles = get_track_names(all_tracks);
+		  console.log(all_titles);
 
-}
+		  //printing data as a list
+		  document.getElementById("display").innerHTML = "<li>"+all_titles[0]+"</li>"+ "<li>"+all_titles[1]+"</li>"+ "<li>"+all_titles[2]+"</li>"+ "<li>"+all_titles[3]+"</li>" ;
+
+
+		}).catch(function (error) {
+			console.error(error);
+		});
+
+		}
 
 
 
