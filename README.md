@@ -16,7 +16,8 @@ The last two weeks of my time at the Tech Academy, I worked with other students 
 
 ## Back End Stories
 * [Back to the top button](#back-to-the-top-button)
-* [Meetup API](#meetup-api)
+* [Dark Mode Function](#dark-mode-function)
+* [Axios API Function](#axios-api-function)
 
 
 
@@ -104,9 +105,10 @@ The last two weeks of my time at the Tech Academy, I worked with other students 
 
 
 ## Front End Stories
-* [Button Sizing Bug](#button-sizing-bug)
+* [Carousel](#carousel)
+* [Form](#form)
 
-### carousel
+### Carousel
 
 <!--Artist section carousel-->
       
