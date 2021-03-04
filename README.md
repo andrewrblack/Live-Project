@@ -1,7 +1,7 @@
 # Live Project
 
 ## Introduction
-The last two weeks of my time at the Tech Academy, I worked with other students in a team on Azure DevOps to create a lifestyle page. We were each tasked with creating a personal interest page to add to the site. I completed several [front end stories](#front-end-stories) front end stories and [back end stories](#back-end-stories) back end stories. It was a fantastic learning experience that allowed me to gain new [skills](#other-skills-learned) that will be ultilized constantly in the future. I am truly proud of the work I accomplished.  
+The last two weeks of my time at the Tech Academy, I worked with other students in a team on Azure DevOps to create a lifestyle page. We were each tasked with creating a personal interest page to add to the site. I completed several front end stories front end stories and back end stories back end stories. It was a fantastic learning experience that allowed me to gain new skills that will be utilized constantly in the future. I am truly proud of the work I accomplished.
   
 Below are descriptions of the stories I worked on, along with code snippets and navigation links. I also have some full code files in this repo for the larger functionalities I implemented.
 
